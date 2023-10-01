@@ -218,6 +218,17 @@ button {
   background-color: #404bbf;
 }
 
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  position: fixed;
+}
+
 .hero-form-wrap {
 }
 .hero-form {
@@ -228,10 +239,12 @@ button {
   justify-content: center;
   max-width: 408px;
   height: 584px;
+  flex-shrink: 0;
   border-radius: 4px;
   background-color: var(--DAIRY, #fcfcfc);
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
 }
 .hero-form-tittle {
   margin-bottom: 16px;
@@ -240,6 +253,7 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  align-self: center;
 }
 .hero-form-label {
   display: flex;
@@ -252,11 +266,63 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
+
+.hero-input {
+  position: relative;
+}
 .hero-form-label:last-child textarea {
   margin-bottom: 16px;
 }
 
 .hero-form-input {
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  width: 100%;
+  height: 40px;
+}
+.hero-form-input:not(.hero-form-input::placeholder) {
+  padding-left: 38px;
+}
+.hero-form-input:focus {
+  border-color: #4d5ae5;
+}
+
+textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.modal-icon,
+.hero-form-input::placeholder {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+}
+.modal-icon-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  padding: 8px;
+}
+
+.modal-pripolicy-wrap {
+  /* display: flex;
+  gap: 8px; */
+  position: relative;
+}
+.modal-icon-checkbox {
+  position: absolute;
+  fill: none;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
 }
 .hero-form-btn {
   color: #fff;
@@ -285,6 +351,7 @@ button {
 
 .hero-form-pripolicy {
   margin-bottom: 24px;
+  margin-left: 24px;
   /* color: var(--LIGHT-SLATE, #8e8f99);
   font-size: 12px;
   font-weight: 400;
@@ -577,4 +644,32 @@ button {
 .footer-social-link .team-soc-link:hover,
 .footer-social-link .team-soc-link:focus {
   background-color: #31d0aa;
+}
+
+.footer-subscribe {
+  margin-left: auto;
+}
+.footer-subscribe-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-subscribe-btn {
+  color: var(--WHITE, #fff);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  background: var(--IRIS, #4d5ae5);
+  padding: 8px 24px;
+  box-shadow: 0;
+}
+
+.footer-input {
+  border-radius: 4px;
+  border: 1px solid var(--WHITE, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  max-width: 264px;
+  height: 40px;
 }
