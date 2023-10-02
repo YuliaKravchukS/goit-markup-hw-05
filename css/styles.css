@@ -58,6 +58,7 @@ textarea,
 button {
   font-family: inherit;
   line-height: inherit;
+  outline: none;
 }
 /* ====================HEADER=================== */
 
@@ -649,10 +650,36 @@ textarea::placeholder {
 .footer-subscribe {
   margin-left: auto;
 }
+
+.footer-input {
+  border-radius: 4px;
+  border: 1px solid var(--WHITE, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.footer-input:not(.footer-input::placeholder) {
+  padding-left: 56px;
+}
+.footer-input::placeholder {
+  padding: 8px 16px;
+  color: var(--WHITE, #fff);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
 .footer-subscribe-text {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  margin-bottom: 16px;
+  color: var(--WHITE, #fff);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 .footer-subscribe-btn {
   color: var(--WHITE, #fff);
@@ -661,15 +688,25 @@ textarea::placeholder {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  background: var(--IRIS, #4d5ae5);
+  background-color: var(--IRIS, #4d5ae5);
   padding: 8px 24px;
   box-shadow: 0;
-}
-
-.footer-input {
-  border-radius: 4px;
-  border: 1px solid var(--WHITE, #fff);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  max-width: 264px;
+  min-width: 165px;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
   height: 40px;
+  border: none;
+  position: relative;
+}
+.footer-subscribe-icon {
+  margin-bottom: 16px;
+}
+.footer-subscribe-icon::after {
+  content: "";
+  background-image: url(../images/frame.svg);
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-size: cover;
 }
