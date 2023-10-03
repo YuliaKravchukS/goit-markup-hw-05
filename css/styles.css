@@ -744,7 +744,7 @@ button {
   fill: transparent;
 }
 
-.hero-form-checkbox:checked + .modal-span-checkbox {
+.hero-form-checkbox:checked + .hero-form-pripolicy .modal-span-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
