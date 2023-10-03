@@ -621,16 +621,13 @@ button {
 .hero-btn-close:focus {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
 }
 
 .icon-close {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero-btn-close:hover,
-.hero-btn-close:focus + .icon-close {
-  fill: #ffffff;
-}
 .hero-form-tittle {
   margin-bottom: 16px;
   color: #2e2f42;
@@ -688,6 +685,7 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  outline: transparent;
   padding: 8px 16px;
   resize: none;
   color: rgba(46, 47, 66, 0.4);
@@ -746,14 +744,15 @@ button {
   fill: transparent;
 }
 
-.hero-form-checkbox:checked {
+.hero-form-checkbox:checked + .modal-span-checkbox {
   background-color: #404bbf;
   border: none;
-}
-
-.hero-form-checkbox:checked + .modal-span-checkbox {
   fill: #f4f4fd;
 }
+
+/* .hero-form-checkbox:checked + .modal-span-checkbox {
+  fill: #f4f4fd;
+} */
 
 .hero-form-btn {
   color: #fff;
